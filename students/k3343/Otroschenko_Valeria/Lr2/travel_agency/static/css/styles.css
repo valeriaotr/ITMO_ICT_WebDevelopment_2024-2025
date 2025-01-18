@@ -271,3 +271,27 @@ body {
     color: #555;
     margin: 0;
 }
+
+/* Стиль кнопки для неавторизованных пользователей */
+.btn-warning {
+    background-color: #ffc107; /* Светло-жёлтый фон */
+    color: #212529; /* Тёмный текст */
+    border-radius: 8px; /* Скруглённые углы */
+    padding: 10px 15px; /* Отступы внутри кнопки */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 14px; /* Размер шрифта */
+    font-weight: 500; /* Полужирный текст */
+    transition: background-color 0.3s ease; /* Плавный переход фона */
+}
+
+.btn-warning:hover {
+    background-color: #e0a800; /* Более тёмный жёлтый при наведении */
+    color: #fff; /* Белый текст */
+}
+
+/* Универсальный стиль для кнопок */
+.action-button {
+    width: 140px; /* Единый фиксированный размер для кнопок */
+    text-align: center; /* Выравнивание текста */
+    display: inline-block; /* Для согласованности */
+}

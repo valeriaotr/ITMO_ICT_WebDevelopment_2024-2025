@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.contrib.auth.views import LogoutView
 from django.urls import path, include
 from . import views as tour_views
 
@@ -16,4 +17,5 @@ urlpatterns = [
     path('tour/<int:tour_id>/review/', tour_views.add_review, name='add_review'),
     path('sold_tours/', tour_views.sold_tours_by_country, name='sold_tours_by_country'),
     path('reservation/delete/<int:reservation_id>/', tour_views.delete_reservation, name='delete_reservation'),
+    path('accounts/logout/', LogoutView.as_view(next_page='tours:tour_list'), name='logout'),
 ]
