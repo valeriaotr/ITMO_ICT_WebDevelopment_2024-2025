@@ -72,20 +72,20 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Lab 3</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../Lr3/" class="dropdown-item">Task</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Lab 4</a>
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Lab 3</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
     <a href="./" class="dropdown-item active" aria-current="page">Task</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Lab 4</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Lr4/" class="dropdown-item">Task</a>
 </li>
                                 </ul>
                             </li>
@@ -163,12 +163,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../Lr3/" class="nav-link">
+                                <a rel="prev" href="../Lr2/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../Leetcode/task-1/" class="nav-link">
+                                <a rel="next" href="../Lr4/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -190,13 +190,21 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#no4" class="nav-link">Лабораторная №4: Медицинская система управления</a>
+            <li class="nav-item" data-bs-level="1"><a href="#no3" class="nav-link">Лабораторная работа №3: Система управления клиникой</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">Основные возможности</a>
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">Описание</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">Основные файлы и их назначение</a>
+            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">Обзор моделей</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#rest-api" class="nav-link">REST API Эндпоинты</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_11" class="nav-link">Инструкция по настройке</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -207,96 +215,77 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="no4">Лабораторная №4: Медицинская система управления</h1>
-<h2 id="_1">Основные возможности</h2>
+<h1 id="no3">Лабораторная работа №3: Система управления клиникой</h1>
+<h2 id="_1">Описание</h2>
+<p>Система управления клиникой на основе Django предоставляет опции для управления пациентами, приёмами, диагнозами, сотрудниками и услугами в клинической среде. </p>
+<h3 id="_2">Основные возможности:</h3>
 <ul>
-<li>Управление записями о приемах:</li>
-<li>Получение списка приемов.</li>
-<li>Добавление нового приема.</li>
-<li>Удаление существующего приема.</li>
-<li>
-<p>Обновление данных приема.</p>
-</li>
-<li>
-<p>Управление врачами:</p>
-</li>
-<li>Получение списка врачей.</li>
-<li>Добавление нового врача.</li>
-<li>
-<p>Удаление врача.</p>
-</li>
-<li>
-<p>Управление медицинскими картами:</p>
-</li>
-<li>Создание новой медицинской карты.</li>
-<li>Получение списка медицинских карт.</li>
-<li>
-<p>Удаление медицинской карты вместе с пациентом.</p>
-</li>
-<li>
-<p>Управление пациентами:</p>
-</li>
-<li>Получение списка пациентов.</li>
-<li>Добавление нового пациента.</li>
-<li>Обновление данных пациента.</li>
-<li>
-<p>Удаление пациента.</p>
-</li>
-<li>
-<p>Управление медицинскими услугами:</p>
-</li>
-<li>Получение списка доступных услуг.</li>
-<li>Добавление новой услуги.</li>
-<li>Обновление данных услуги.</li>
-<li>Удаление услуги.</li>
+<li><strong>Управление пациентами:</strong> Создание, чтение, обновление и удаление записей пациентов, включая персональные данные и медицинскую историю.</li>
+<li><strong>Управление сотрудниками и расписанием:</strong> Ведение данных о сотрудниках, включая специализацию, расписания и периоды работы.</li>
+<li><strong>Управление приёмами:</strong> Отслеживание приёмов пациентов, связанных диагнозов и рекомендаций.</li>
+<li><strong>Управление услугами:</strong> Определение клинических услуг, цен и предоставленных услуг с учётом статуса оплаты.</li>
+<li><strong>Статистика и отчёты:</strong> Генерация отчётов, таких как стоимость лечения и количество приёмов по датам.</li>
 </ul>
-<h2 id="_2">Основные файлы и их назначение</h2>
-<h3 id="axiosinstancejs"><code>axiosInstance.js</code></h3>
+<h2 id="_3">Обзор моделей</h2>
+<h3 id="_4">Основные модели:</h3>
+<ol>
+<li><strong>Patient (Пациент):</strong> Хранит персональную информацию и контактные данные пациентов.</li>
+<li><strong>MedicalCard (Медицинская карта):</strong> Отслеживает медицинскую историю пациента и диагнозы.</li>
+<li><strong>Diagnosis (Диагноз):</strong> Представляет медицинские диагнозы, классифицированные по типам.</li>
+<li><strong>Appointment (Приём):</strong> Управляет приёмами пациентов, связанными диагнозами и рекомендациями.</li>
+</ol>
+<h3 id="_5">Управление сотрудниками:</h3>
+<ol>
+<li><strong>Employee (Сотрудник):</strong> Хранит информацию о сотрудниках клиники.</li>
+<li><strong>EmployeeSchedule (Расписание сотрудника):</strong> Отслеживает рабочие дни и назначенные кабинеты.</li>
+<li><strong>EmploymentPeriod (Период работы):</strong> Записывает историю занятости сотрудников.</li>
+<li><strong>Specialization (Специализация):</strong> Управляет специализациями сотрудников.</li>
+</ol>
+<h3 id="_6">Управление услугами и оплатой:</h3>
+<ol>
+<li><strong>Service (Услуга):</strong> Определяет услуги, предоставляемые клиникой.</li>
+<li><strong>ServicePrice (Цена услуги):</strong> Хранит информацию о ценах на услуги за определённые периоды времени.</li>
+<li><strong>ProvidedService (Предоставленная услуга):</strong> Отслеживает услуги, назначенные или завершённые во время приёмов.</li>
+<li><strong>PaymentForProvidedService (Оплата за предоставленную услугу):</strong> Управляет статусом оплаты за услуги.</li>
+</ol>
+<h2 id="rest-api">REST API Эндпоинты</h2>
+<h3 id="_7">Управление пациентами:</h3>
 <ul>
-<li>Настраивает экземпляр Axios с указанием базового URL и токена авторизации.</li>
+<li><strong>Patient Viewset:</strong> <code>/api/patient/</code> CRUD операции для записей пациентов.</li>
+<li><strong>Medical Card Viewset:</strong> <code>/api/medicalcard/</code> CRUD операции для медицинских карт.</li>
 </ul>
-<h3 id="apiappointmentsjs"><code>api/appointments.js</code></h3>
+<h3 id="_8">Управление приёмами:</h3>
 <ul>
-<li>Функции для работы с приемами:</li>
-<li><code>getAppointments</code></li>
-<li><code>addAppointment</code></li>
-<li><code>deleteAppointment</code></li>
-<li><code>updateAppointment</code></li>
+<li><strong>Appointment Viewset:</strong> <code>/api/appointment/</code> CRUD операции для приёмов.</li>
+<li><strong>Diagnoses for Appointments:</strong> <code>/api/appointment-diagnosis/</code> Отслеживание диагнозов, связанных с приёмами.</li>
 </ul>
-<h3 id="apidoctorsjs"><code>api/doctors.js</code></h3>
+<h3 id="_9">Управление сотрудниками:</h3>
 <ul>
-<li>Функции для работы с данными врачей:</li>
-<li><code>getDoctors</code></li>
-<li><code>addDoctor</code></li>
-<li><code>deleteDoctor</code></li>
+<li><strong>Employee Viewset:</strong> <code>/api/employee/</code> Управление данными сотрудников.</li>
+<li><strong>Employee Schedules:</strong> <code>/api/employee-schedule/</code> Управление и получение рабочих графиков.</li>
 </ul>
-<h3 id="apimedicalcardsjs"><code>api/medicalCards.js</code></h3>
+<h3 id="_10">Отчёты:</h3>
 <ul>
-<li>Функции для работы с медицинскими картами:</li>
-<li><code>createMedicalCard</code></li>
-<li><code>getMedicalCards</code></li>
-<li><code>deleteMedicalCard</code></li>
+<li><strong>Пациенты по врачу:</strong> <code>/api/patients-by-doctor/&lt;doctor_id&gt;/</code> Получение списка пациентов для конкретного врача.</li>
+<li><strong>Количество приёмов по дате:</strong> <code>/api/appointments-count-by-date/</code> Получение количества приёмов по каждой дате.</li>
+<li><strong>Стоимость лечения по дате и врачу:</strong> <code>/api/treatment-cost-by-date-and-doctor/</code> Получение стоимости лечения.</li>
+<li><strong>Оплаченные пациенты:</strong> <code>/api/paid-patients/</code> Получение списка пациентов, завершивших оплату.</li>
 </ul>
-<h3 id="apipatientsjs"><code>api/patients.js</code></h3>
-<ul>
-<li>Функции для работы с пациентами:</li>
-<li><code>getPatients</code></li>
-<li><code>createPatient</code></li>
-<li><code>updatePatient</code></li>
-<li><code>deletePatient</code></li>
-</ul>
-<h3 id="apiservicesjs"><code>api/services.js</code></h3>
-<ul>
-<li>Функции для работы с медицинскими услугами:</li>
-<li><code>getServices</code></li>
-<li><code>createService</code></li>
-<li><code>updateService</code></li>
-<li><code>deleteService</code></li>
-</ul>
-<h3 id="_3">Дополнительные функции</h3>
-<ul>
-<li><code>getCabinets</code>: Получение списка кабинетов.</li>
-</ul></div>
+<h2 id="_11">Инструкция по настройке</h2>
+<ol>
+<li>
+<p><strong>Установите зависимости:</strong>
+   <code>bash
+   pip install -r requirements.txt</code></p>
+</li>
+<li>
+<p><strong>Запустите сервер:</strong>
+   <code>bash
+   python manage.py runserver</code></p>
+</li>
+</ol>
+<p>3<strong>Доступ к API:</strong>
+   Перейдите по адресу <code>http://127.0.0.1:8000/swagger</code> для доступа к интерфейсу API (Swagger UI).</p></div>
             </div>
         </div>
 
