@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Task - WEB documentation</title>
+        <title>Practice 3.1 - WEB documentation</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
@@ -72,11 +72,11 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Lab 3</a>
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Lab 3</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page">Task</a>
+    <a href="../Lr3/" class="dropdown-item">Task</a>
 </li>
                                 </ul>
                             </li>
@@ -155,11 +155,11 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Practice</a>
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Practice</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../practical/" class="dropdown-item">Practice 3.1</a>
+    <a href="./" class="dropdown-item active" aria-current="page">Practice 3.1</a>
 </li>
                                 </ul>
                             </li>
@@ -172,12 +172,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../Lr2/" class="nav-link">
+                                <a rel="prev" href="../Leetcode/task-15/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../Lr4/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -199,21 +199,17 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#no3" class="nav-link">Лабораторная работа №3: Система управления клиникой</a>
+            <li class="nav-item" data-bs-level="1"><a href="#31" class="nav-link">Практическое задание 3.1</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">Описание</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">Обзор моделей</a>
+            <li class="nav-item" data-bs-level="2"><a href="#1" class="nav-link">Задание 1</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#rest-api" class="nav-link">REST API Эндпоинты</a>
+            <li class="nav-item" data-bs-level="2"><a href="#2" class="nav-link">Задание 2</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#_11" class="nav-link">Инструкция по настройке</a>
+            <li class="nav-item" data-bs-level="2"><a href="#3" class="nav-link">Задание 3</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -224,77 +220,137 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="no3">Лабораторная работа №3: Система управления клиникой</h1>
-<h2 id="_1">Описание</h2>
-<p>Система управления клиникой на основе Django предоставляет опции для управления пациентами, приёмами, диагнозами, сотрудниками и услугами в клинической среде. </p>
-<h3 id="_2">Основные возможности:</h3>
-<ul>
-<li><strong>Управление пациентами:</strong> Создание, чтение, обновление и удаление записей пациентов, включая персональные данные и медицинскую историю.</li>
-<li><strong>Управление сотрудниками и расписанием:</strong> Ведение данных о сотрудниках, включая специализацию, расписания и периоды работы.</li>
-<li><strong>Управление приёмами:</strong> Отслеживание приёмов пациентов, связанных диагнозов и рекомендаций.</li>
-<li><strong>Управление услугами:</strong> Определение клинических услуг, цен и предоставленных услуг с учётом статуса оплаты.</li>
-<li><strong>Статистика и отчёты:</strong> Генерация отчётов, таких как стоимость лечения и количество приёмов по датам.</li>
-</ul>
-<h2 id="_3">Обзор моделей</h2>
-<h3 id="_4">Основные модели:</h3>
-<ol>
-<li><strong>Patient (Пациент):</strong> Хранит персональную информацию и контактные данные пациентов.</li>
-<li><strong>MedicalCard (Медицинская карта):</strong> Отслеживает медицинскую историю пациента и диагнозы.</li>
-<li><strong>Diagnosis (Диагноз):</strong> Представляет медицинские диагнозы, классифицированные по типам.</li>
-<li><strong>Appointment (Приём):</strong> Управляет приёмами пациентов, связанными диагнозами и рекомендациями.</li>
-</ol>
-<h3 id="_5">Управление сотрудниками:</h3>
-<ol>
-<li><strong>Employee (Сотрудник):</strong> Хранит информацию о сотрудниках клиники.</li>
-<li><strong>EmployeeSchedule (Расписание сотрудника):</strong> Отслеживает рабочие дни и назначенные кабинеты.</li>
-<li><strong>EmploymentPeriod (Период работы):</strong> Записывает историю занятости сотрудников.</li>
-<li><strong>Specialization (Специализация):</strong> Управляет специализациями сотрудников.</li>
-</ol>
-<h3 id="_6">Управление услугами и оплатой:</h3>
-<ol>
-<li><strong>Service (Услуга):</strong> Определяет услуги, предоставляемые клиникой.</li>
-<li><strong>ServicePrice (Цена услуги):</strong> Хранит информацию о ценах на услуги за определённые периоды времени.</li>
-<li><strong>ProvidedService (Предоставленная услуга):</strong> Отслеживает услуги, назначенные или завершённые во время приёмов.</li>
-<li><strong>PaymentForProvidedService (Оплата за предоставленную услугу):</strong> Управляет статусом оплаты за услуги.</li>
-</ol>
-<h2 id="rest-api">REST API Эндпоинты</h2>
-<h3 id="_7">Управление пациентами:</h3>
-<ul>
-<li><strong>Patient Viewset:</strong> <code>/api/patient/</code> CRUD операции для записей пациентов.</li>
-<li><strong>Medical Card Viewset:</strong> <code>/api/medicalcard/</code> CRUD операции для медицинских карт.</li>
-</ul>
-<h3 id="_8">Управление приёмами:</h3>
-<ul>
-<li><strong>Appointment Viewset:</strong> <code>/api/appointment/</code> CRUD операции для приёмов.</li>
-<li><strong>Diagnoses for Appointments:</strong> <code>/api/appointment-diagnosis/</code> Отслеживание диагнозов, связанных с приёмами.</li>
-</ul>
-<h3 id="_9">Управление сотрудниками:</h3>
-<ul>
-<li><strong>Employee Viewset:</strong> <code>/api/employee/</code> Управление данными сотрудников.</li>
-<li><strong>Employee Schedules:</strong> <code>/api/employee-schedule/</code> Управление и получение рабочих графиков.</li>
-</ul>
-<h3 id="_10">Отчёты:</h3>
-<ul>
-<li><strong>Пациенты по врачу:</strong> <code>/api/patients-by-doctor/&lt;doctor_id&gt;/</code> Получение списка пациентов для конкретного врача.</li>
-<li><strong>Количество приёмов по дате:</strong> <code>/api/appointments-count-by-date/</code> Получение количества приёмов по каждой дате.</li>
-<li><strong>Стоимость лечения по дате и врачу:</strong> <code>/api/treatment-cost-by-date-and-doctor/</code> Получение стоимости лечения.</li>
-<li><strong>Оплаченные пациенты:</strong> <code>/api/paid-patients/</code> Получение списка пациентов, завершивших оплату.</li>
-</ul>
-<h2 id="_11">Инструкция по настройке</h2>
-<ol>
-<li>
-<p><strong>Установите зависимости:</strong>
-   <code>bash
-   pip install -r requirements.txt</code></p>
-</li>
-<li>
-<p><strong>Запустите сервер:</strong>
-   <code>bash
-   python manage.py runserver</code></p>
-</li>
-</ol>
-<p>3<strong>Доступ к API:</strong>
-   Перейдите по адресу <code>http://127.0.0.1:8000/swagger</code> для доступа к интерфейсу API (Swagger UI).</p></div>
+<h1 id="31">Практическое задание 3.1</h1>
+<h2 id="1">Задание 1</h2>
+<p>Напишите запрос на создание 6-7 новых автовладельцев и 5-6 автомобилей, каждому автовладельцу назначьте удостоверение и от 1 до 3 автомобилей. Задание можете выполнить либо в интерактивном режиме интерпретатора, либо в отдельном python-файле. Результатом должны стать запросы и отображение созданных объектов.</p>
+<pre><code class="language-angular2html">
+In [3]: from project_first_app.models import *
+
+In [4]: car = Car.objects.create(state_number=&quot;B999BB100&quot;, brand=&quot;Mercedes&quot;, model=&quot;S&quot;)
+
+In [5]: car = Car.objects.create(state_number=&quot;B999BB111&quot;, brand=&quot;Mercedes&quot;, model=&quot;E&quot;)
+
+In [6]: car = Car.objects.create(state_number=&quot;A000AA111&quot;, brand=&quot;BMW&quot;, model=&quot;M4&quot;)
+
+In [7]: car = Car.objects.create(state_number=&quot;A000AA111&quot;, brand=&quot;BMW&quot;, model=&quot;M5&quot;)
+
+In [8]: car = Car.objects.create(state_number=&quot;A000AA123&quot;, brand=&quot;BMW&quot;, model=&quot;M3&quot;)
+
+</code></pre>
+<pre><code class="language-angular2html">In [12]: owner = Owner.objects.create(first_name=&quot;Ivan&quot;, last_name=&quot;Ivanov&quot;)
+
+In [13]: owner = Owner.objects.create(first_name=&quot;Ivan&quot;, last_name=&quot;Ivankin&quot;)
+
+In [14]: owner = Owner.objects.create(first_name=&quot;Artem&quot;, last_name=&quot;Artemov&quot;)
+
+In [15]: owner = Owner.objects.create(first_name=&quot;Artem&quot;, last_name=&quot;Artemin&quot;)
+
+In [16]: owner = Owner.objects.create(first_name=&quot;Alex&quot;, last_name=&quot;Alexov&quot;)
+</code></pre>
+<pre><code class="language-angular2html">In [17]: car = Car.objects.get(state_number='B999BB100')
+
+In [18]: owner = Owner.objects.get(last_name='Ivanov')
+
+In [19]: ownership = Ownership.objects.create(owner_id=owner, car_id=car, date_start='2024-01-01', date_end='2025-01-01')
+
+
+In [20]: car = Car.objects.get(state_number='B999BB111')
+
+In [21]: owner = Owner.objects.get(last_name='Ivankin')
+
+In [22]: ownership = Ownership.objects.create(owner_id=owner, car_id=car, date_start='2024-01-01', date_end='2025-01-01')
+
+
+In [23]: car = Car.objects.get(state_number='A000AA111', model='M4')
+
+In [24]: owner = Owner.objects.get(last_name='Artemov')
+
+In [25]: ownership = Ownership.objects.create(owner_id=owner, car_id=car, date_start='2024-01-01', date_end='2025-01-01')
+
+
+In [26]: car = Car.objects.get(state_number='A000AA111', model='M5')
+
+In [27]: owner = Owner.objects.get(last_name='Artemin')
+
+In [28]: ownership = Ownership.objects.create(owner_id=owner, car_id=car, date_start='2024-01-01', date_end='2025-01-01')
+
+
+In [29]: car = Car.objects.get(state_number='A000AA123')
+
+In [30]: owner = Owner.objects.get(last_name='Alexov')
+
+In [31]: ownership = Ownership.objects.create(owner_id=owner, car_id=car, date_start='2024-01-01', date_end='2025-01-01')
+</code></pre>
+<pre><code class="language-angular2html">In [32]: owner = Owner.objects.get(first_name='Ivan', last_name='Ivanov')
+In [33]: license = DriverLicense.objects.create(owner_id=owner, license_number='1111111111', type='b', date_of_issue='2024-01-15')
+
+In [34]: owner = Owner.objects.get(first_name='Ivan', last_name='Ivankin')
+In [35]: license = DriverLicense.objects.create(owner_id=owner, license_number='1111111112', type='b', date_of_issue='2027-03-22')
+
+In [36]: owner = Owner.objects.get(first_name='Artem', last_name='Artemov')
+In [37]: license = DriverLicense.objects.create(owner_id=owner, license_number='1111111113', type='b', date_of_issue='2028-08-10')
+
+In [38]: owner = Owner.objects.get(first_name='Artem', last_name='Artemin')
+In [39]: license = DriverLicense.objects.create(owner_id=owner, license_number='1111111114', type='b', date_of_issue='2029-11-05')
+
+In [40]: owner = Owner.objects.get(first_name='Alex', last_name='Alexov')
+In [41]: license = DriverLicense.objects.create(owner_id=owner, license_number='1111111115', type='b', date_of_issue='2030-06-18')
+</code></pre>
+<h2 id="2">Задание 2</h2>
+<p>По созданным в пр.1 данным написать следующие запросы на фильтрацию:</p>
+<p>Где это необходимо, добавьте related_name к полям модели
+Выведете все машины марки “Toyota” (или любой другой марки, которая у вас есть)
+Найти всех водителей с именем “Олег” (или любым другим именем на ваше усмотрение)
+Взяв любого случайного владельца получить его id, и по этому id получить экземпляр удостоверения в виде объекта модели (можно в 2 запроса)
+Вывести всех владельцев красных машин (или любого другого цвета, который у вас присутствует)
+Найти всех владельцев, чей год владения машиной начинается с 2010 (или любой другой год, который присутствует у вас в базе)</p>
+<pre><code class="language-angular2html">In [21]: Car.objects.filter(brand='Mercedes')
+Out[21]: &lt;QuerySet [&lt;Car: Car object (1)&gt;, &lt;Car: Car object (2)&gt;]&gt; 
+
+In [33]: license = DriverLicense.objects.get(owner_id=1)
+In [34]: license
+
+Out[34]: &lt;DriverLicense: DriverLicense object (1)&gt;
+
+In [35]owners = Owner.objects.filter(owner_car__car__color__contains='Blue')
+Out[35]: &lt;QuerySet [&lt;Owner: Owner object (1)&gt;, &lt;Owner: Owner object (2)&gt;]&gt;
+</code></pre>
+<h2 id="3">Задание 3</h2>
+<p>Вывод даты выдачи самого старшего водительского удостоверения
+Укажите самую позднюю дату владения машиной, имеющую какую-то из существующих моделей в вашей базе
+Выведите количество машин для каждого водителя
+Подсчитайте количество машин каждой марки
+Отсортируйте всех автовладельцев по дате выдачи удостоверения</p>
+<pre><code class="language-angular2html">In [36]: from django.db.models import Min, Max
+
+In [37]: DriverLicense.objects.annotate(Max(&quot;date_of_issue&quot;))
+Out[37]: &lt;QuerySet [&lt;DriverLicense: DriverLicense object (1)&gt;, &lt;DriverLicense: DriverLicense object (2)&gt;, &lt;DriverLicense: DriverLicense object (3)&gt;, &lt;DriverLicense: DriverLicense object (4)&gt;, &lt;DriverLicense: DriverLicense object (5)&gt;]&gt;
+
+In [38]: DriverLicense.objects.aggregate(Max(&quot;date_of_issue&quot;))
+Out[38]: {'date_of_issue__max': datetime.date(2030, 6, 18)}
+
+In [39]: DriverLicense.objects.aggregate(Min(&quot;date_of_issue&quot;))
+Out[39]: {'date_of_issue__min': datetime.date(2024, 1, 15)}
+
+In [40]: Ownership.objects.aggregate(Max(&quot;date_start&quot;))
+Out[40]: {'date_start__max': datetime.date(2024, 6, 21)}
+
+In [41]: Ownership.objects.values(&quot;owner&quot;).annotate(Count(&quot;id&quot;))
+Out[41]: &lt;QuerySet [{'owner': 1, 'id__count': 1}, {'owner': 2, 'id__count': 1}, {'owner': 3, 'id__count': 1}, {'owner': 4, 'id__count': 1}, {'owner': 5, 'id__count': 1}]&gt;
+
+In [42]: from django.db.models import Count
+
+In [43]: Ownership.objects.values(&quot;owner&quot;).annotate(Count(&quot;id&quot;))
+Out[43]: &lt;QuerySet [{'owner': 1, 'id__count': 1}, {'owner': 2, 'id__count': 1}, {'owner': 3, 'id__count': 1}, {'owner': 4, 'id__count': 1}, {'owner': 5, 'id__count': 1}]&gt;
+
+In [44]: Car.objects.values(&quot;brand&quot;).annotate(Count(&quot;id&quot;))
+Out[44]: &lt;QuerySet [{'brand': 'Mercedes', 'id__count': 2}, {'brand': 'BMW', 'id__count': 3}]&gt;
+
+In [45]: from django.db.models import F
+
+In [46]: Owner.objects.annotate(issue_date=F('driverlicense__date_of_issue')).distinct().order_by('issue_date')
+Out[46]: &lt;QuerySet [&lt;Owner: Owner object (1)&gt;, &lt;Owner: Owner object (2)&gt;, &lt;Owner: Owner object (3)&gt;, &lt;Owner: Owner object (4)&gt;, &lt;Owner: Owner object (5)&gt;]&gt;
+</code></pre></div>
             </div>
         </div>
 
